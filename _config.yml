@@ -53,7 +53,6 @@ defaults:
       layout: post
 
 exclude:
-  - _legacy
   - README.md
   - LICENSE
   - Gemfile
@@ -61,5 +60,3 @@ exclude:
   - vendor
   - .bundle
   - .github
-  - images
-  - files

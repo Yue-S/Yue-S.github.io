@@ -32,9 +32,8 @@ bundle exec jekyll serve
 主题使用现代 Sass，需要 Jekyll 4 构建，因此使用上面的 Actions 工作流。
 Pull request 仅构建验证，不发布。
 
-## 旧站点与主题来源
+## 主题来源
 
-- 原 Academic Pages 源码和示例内容保存在 `_legacy/`，不参与网站构建；原 `images/`、`files/` 也保留但暂不发布。引用其中素材时，从 `_config.yml` 的 `exclude` 列表移除对应目录。
 - Moonwalk 源码来自 `abhinavs/moonwalk`，版本 `abab9f3`（2026-05-05），已复制到仓库，不依赖构建时拉取主题。
-- 保留 Moonwalk 的 MIT 许可证；旧主题许可证在 `_legacy/LICENSE`。
+- 保留 Moonwalk 的 MIT 许可证。
 - 使用 `jekyll-seo-tag`，未启用 Soopr 等第三方分享或统计服务。
