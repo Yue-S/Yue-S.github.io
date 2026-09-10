@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: read
+  pages: read
 
 concurrency:
   group: pages-${{ github.ref }}
@@ -19,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
