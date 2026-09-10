@@ -1,0 +1,21 @@
+navbar_entries:
+  - title: 关于
+    url: /about/
+  - title: 文章
+    url: /blog/
+  - title: GitHub
+    url: https://github.com/Yue-S
+
+project_entries:
+  - title: 个人主页
+    url: https://github.com/Yue-S/Yue-S.github.io
+    desc: 这个网站的源代码。
+  - title: GitHub 项目
+    url: https://github.com/Yue-S?tab=repositories
+    desc: 浏览我的公开代码仓库。
+
+footer_entries:
+  - title: GitHub
+    url: https://github.com/Yue-S
+  - title: RSS
+    url: /feed.xml

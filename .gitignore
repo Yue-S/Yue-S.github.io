@@ -5,7 +5,11 @@ _site/
 local/
 
 # Ignore the Gemfile that is generated
-Gemfile.lock
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+/vendor/
 
 # Ingore files created by npm
 node_modules

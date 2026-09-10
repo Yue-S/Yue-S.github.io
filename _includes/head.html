@@ -1,21 +1,29 @@
-{% include base_path %}
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta charset="utf-8">
+  <title>
+    {% if page.title %}
+      {{ page.title }}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
 
-{% include seo.html %}
+  {% seo title=false %}
+  {% feed_meta %}
 
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+  <link rel="icon" type="image/svg+xml" href="{{ "/assets/favicon.svg" | relative_url }}">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%- if site.soopr -%}
+  <link rel="dns-prefetch" href="https://sdk.soopr.co">
+  {%- endif -%}
 
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
+  {% if site.theme_config.appearance_toggle %}
+    {% include toggle_theme_js.html %}
+  {% endif %}
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
-
-<meta http-equiv="cleartype" content="on">
+  {%- include custom_head.html -%}
+</head>

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<a href="{{ '/' | relative_url }}" class="back-link" aria-label="返回首页">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="15 18 9 12 15 6"></polyline>
+  </svg>
+</a>
+
+<header>
+  <h1>{{ page.title }}</h1>
+</header>
+
+{% include post_list.html %}
+{% if site.posts.size == 0 %}
+<p>还没有发布文章，欢迎以后再来看看。</p>
+{% endif %}
